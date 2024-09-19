@@ -1,9 +1,13 @@
-#include <iostream>
+#include <iostream> 
+using namespace std;
 int main(){
 
-std::cout<<"**************************************"<<std::endl;
+cout << "************************" << endl;
+cout << "Bienvenido al juego de la adivinanza" << endl;
+cout << "************************" << endl;
 
-std::cout<<"*Bienvenido al JUEGO de la adivinanza!*"<<std::endl;
-std::cout<<"***************************************"<<std::endl;
+int numero_secreto = 42;
+cout <<"El número secreto es ..." << numero_secreto << ". No lodiga a para nadie! "  << endl;
+
 
 }
