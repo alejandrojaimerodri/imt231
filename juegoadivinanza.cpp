@@ -9,12 +9,22 @@ cout << "************************" << endl;
 int numero_secreto = 42;
 cout <<"El número secreto es ..." << numero_secreto << ". No lodiga a para nadie! "  << endl;
 
-<<<<<<< HEAD
 int adivina;
 cout << "Cuál es  el número" ;
 cin >> adivina;
 cout << "El valor de su número es: " << adivina << endl;
-=======
->>>>>>> aac3cc01b364e738025eeb2edc95aa1bcd149f1c
+
+if (adivina == numero_secreto) {
+    // El jugador ha adivinado correctamente el número
+    cout << "¡Felicitaciones! Has adivinado el número secreto." << endl;
+} 
+else if (adivina > numero_secreto) {
+    // El número ingresado es mayor que el número secreto
+    cout << "El número ingresado es mayor que el número secreto." << endl;
+} 
+else {
+    // El número ingresado es menor que el número secreto
+    cout << "El número ingresado es menor que el número secreto." << endl;
+}
 
 }
