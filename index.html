@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Presentación de Proyecto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .section {
+            background-color: white;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .integrantes {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .integrante {
+            text-align: center;
+            margin: 10px;
+        }
+        .integrante img {
+            max-width: 200px;
+            border-radius: 50%;
+        }
+        .proyecto-fotos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .proyecto-fotos img {
+            max-width: 300px;
+            margin: 10px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Detección de Madurez de una Fruta Utilizando Visión Artificial</h1>
+        <h2>Materia: Programación Superior</h2>
+    </div>
+
+    <div class="section">
+        <h3>Información General</h3>
+        <p><strong>Docente:</strong> MSc. Sergio Hernán Valenzuela</p>
+        <p><strong>Lugar:</strong> Universidad Católica Boliviana San Pablo sede Cochabamba</p>
+        <p><strong>Fecha:</strong> 05 de diciembre de 2024</p>
+    </div>
+
+    <div class="section">
+        <h3>Integrantes del Grupo</h3>
+        <div class="integrantes">
+
+            <div class="integrante">
+                <img src="{{ url_for('static', filename='adrian.jpg') }}" width="200" height="200" alt="Integrante 1">
+                <p>Adrian Mateo González Quiroga</p>
+            </div>
+
+            <div class="integrante">
+                <img src="{{ url_for('static', filename='alejandro.jpg') }}" width="200" height="200" alt="Integrante 2">
+                <p>Alejandro Jaime Rodriguez Camacho</p>
+            </div>
+            <div class="integrante">
+                <img src="{{ url_for('static', filename='axel.jpg') }}" width="200" height="200" alt="Integrante 3">
+                <p>Axel Ariel Macias Quiroga</p>
+            </div>
+            <div class="integrante">
+                <img src="{{ url_for('static', filename='erwin.jpg') }}" width="200" height="200" alt="Integrante 4">
+                <p>Erwin Samuel Morales Montaño</p>
+            </div>
+            <div class="integrante">
+                <img src="{{ url_for('static', filename='israel.jpg') }}" width="200" height="200" alt="Integrante 5">
+                <p>Israel Jose Ticona Mamani</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Descripción del Proyecto</h3>
+        <p>El objetivo principal del proyecto fue desarrollar un sistema capaz de detectar la madurez de frutas utilizando una cámara y técnicas de visión artificial, implementadas a través de la librería OpenCV.</p>
+
+        <h4>Metodología</h4>
+        <p>Para que la Raspberry Pi fuera capaz de reconocer objetos (en este caso, frutas) mediante una cámara, fue necesario implementar el uso de OpenCV, una librería de código abierto ampliamente utilizada para el procesamiento de imágenes y visión por computadora. Fue necesario instalar el paquete del OpenCV directamente en la Raspberry mediante los siguientes comandos en su terminal:</p>
+        <pre>
+sudo apt update
+sudo apt upgrade
+sudo apt install python3-opencv
+        </pre>
+        <p>Una vez instalado el paquete de OpenCV y el código base de detección de madurez de frutas, se conectó una cámara web a la Raspberry para corroborar que pudiera reconocer las frutas y analizar su madurez. Posteriormente, se hicieron modificaciones en el código para que, cuando se detectara una fruta madura, un LED verde se encendiera simultáneamente; en caso contrario, se encendería un LED rojo.</p>
+        <p>Tras finalizar las modificaciones, se conectó la Raspberry a un protoboard para que sus señales llegaran a los LEDs mediante cables jumper. Se realizaron pruebas para verificar el funcionamiento del programa. Finalmente, se constató que la Raspberry fue capaz de procesar el código y analizar la madurez de las frutas con eficacia.</p>
+
+        <div class="proyecto-fotos">
+            <img src="{{ url_for('static', filename='maduro.jpg') }}" width="200" height="200" alt="fruta madura">
+            <img src="{{ url_for('static', filename='inmaduro.jpg') }}" width="200" height="200" alt="fruta inmadura">
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Materiales</h3>
+        <ul>
+            <li>Raspberry Pi</li>
+            <li>Cámara Web</li>
+            <li>Cables Jumper</li>
+            <li>Focos Led</li>
+            <li>Protoboard</li>
+            <li>Cable de Alimentación</li>
+            <li>Limón Sin madurar (Verde)</li>
+            <li>Limón Maduro (Amarillo)</li>
+            <li>Resistencias de 220 ohm</li>
+        </ul>
+        <h3>Recursos</h3>
+        <ul>
+            <li>Terminal de la Raspberry</li>
+            <li>SSH</li>
+            <li>PUTTY</li>
+            <li>VNCSERVER</li>
+            <li>Jupyter Anaconda</li>
+            <li>OpenCV</li>
+        </ul>
+    </div>
+</body>
+</html>
